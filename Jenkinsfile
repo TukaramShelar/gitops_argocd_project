@@ -4,8 +4,8 @@ pipeline{
 
         environment{
 
-        DOCKERHUB_USERNAME = "anshuman123abc"
-        APP_NAME = "gitops-argocd"
+        DOCKERHUB_USERNAME = "tukaramshelar"
+        APP_NAME = "gitops-argocd_CI"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
         REGISTRY_CREDS = 'dockerhub'
@@ -33,7 +33,7 @@ pipeline{
                 script{
 
                     git credentialsId: "github",
-                    url: 'https://github.com/anshumanhota1/gitops_argocd_project.git',
+                    url: 'https://github.com/TukaramShelar/gitops_argocd_project.git',
                     branch: 'main'
                 }
             }
